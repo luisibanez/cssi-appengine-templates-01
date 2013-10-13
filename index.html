@@ -75,6 +75,161 @@ git remote -v
           </ul>
         </section>
 
+        <section>
+          <h2>Fork the Repository</h2>
+          <a href="#" class="image">
+            <img src="images/GitIntroductionPartII-001.png" alt="Fork the repository">
+          </a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Copy the Fork Address</h2>
+          <a href="#" class="image">
+            <img src="images/GitIntroductionPartII-002.png" alt="Fork address">
+          </a>
+          </p>
+        </section>
+
+        <section>
+          <h3>Add the Remote repository</h3>
+          <pre><code data-trim contenteditable>
+git remote add luisgithub git@github.com:luisibanez/Git-Branchy-Story-Exercise-02.git
+          </code></pre>
+          <ul>
+            <li>luisgithub = local name for remote repository
+          </ul>
+        </section>
+
+        <section>
+          <h3>See the remote repositories </h3>
+          <pre><code data-trim contenteditable>
+git remote -v
+          </code></pre>
+          <a href="#" class="image">
+            <img src="images/GitIntroductionPartII-003.png" alt="Add remote">
+          </a>
+        </section>
+
+        <section>
+          <h1>Your Turn !</h1>
+        </section>
+
+       <section>
+          <h2>Add Remote</h2>
+          <h2>Repositories</h2>
+          <p>Work with your Team</p>
+          <ul>
+            <li>Ask team members for their fork address
+            <li>Add their address as a remote
+            <li>Name the remotes after their first names
+          </ul>
+        </section>
+
+        <section>
+          <h3>One Team Member</h3>
+          <h3>Create Team Directory</h3>
+          <pre><code data-trim contenteditable>
+mkdir FantasticFour
+
+cd FantasticFour
+
+nano README.md
+
+cd ..
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>One Team Member</h3>
+          <h3>Commit Team Directory</h3>
+          <pre><code data-trim contenteditable>
+git add FantasticFour
+
+git commit -m "Started team directory"
+
+git push origin master
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>All Team Members</h3>
+          <h3>Update their local repositories</h3>
+          <pre><code data-trim contenteditable>
+git pull origin master
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>All Team Members</h3>
+          <h3>Look at recent commits</h3>
+          <pre><code data-trim contenteditable>
+git log
+          </code></pre>
+          <a href="#" class="image">
+            <img src="images/GitIntroductionPartII-004.png" alt="Check logs">
+          </a>
+        </section>
+
+       <section>
+          <h2>Note That</h2>
+          <p>The log tells you:</p>
+          <ul>
+            <li>Who did it
+            <li>When it was done
+            <li>Name the remotes after their first names
+          </ul>
+        </section>
+
+        <section>
+          <h3>All Team Members</h3>
+          <h3>Look at recent commits</h3>
+          <h4>Using short format</h4>
+          <pre><code data-trim contenteditable>
+git log --oneline
+          </code></pre>
+          <a href="#" class="image">
+            <img src="images/GitIntroductionPartII-005.png" alt="Check logs one lined">
+          </a>
+       </section>
+
+       <section>
+          <h2>Note That</h2>
+          <p>Every commit</p>
+          <p>is identified by a hash</p>
+          <p>such as:</p>
+          <pre><code data-trim contenteditable>
+5d7d137a3592fe402a4bc282375c2d8bb878326c
+          </code></pre>
+       </section>
+
+       <section>
+          <h3>You can use</h3>
+          <h3>the first characters</h3>
+          <h3>to refer</h3>
+          <h3>to this commit</h3>
+       </section>
+
+       <section>
+          <h2>You can use</h2>
+          <h3>"git show"</h3>
+          <pre><code data-trim contenteditable>
+git show 5d7d137
+          </code></pre>
+          <h4>to find out more</h4>
+          <h4>about this commit</h4>
+        </section>
+
+        <section>
+          <h3>See commit details</h3>
+          <pre><code data-trim contenteditable>
+git show 5d7d137
+          </code></pre>
+          <a href="#" class="image">
+            <img src="images/GitIntroductionPartII-006.png" alt="Add remote">
+          </a>
+        </section>
+
 
         <section>
           <h1>THE END</h1>
