@@ -365,6 +365,222 @@ git show 5d7d137
           </a>
         </section>
 
+        <section>
+          <h2>Time to</h2>
+          <h2>Go Wild!</h2>
+        </section>
+
+        <section>
+          <h2>Each Team Member</h2>
+          <ul>
+            <li>Picks a "character" name
+            <li>Go into the team directory
+            <li>Creates a file with that name
+            <li>and extension ".md"
+          </ul>
+        </section>
+
+        <section>
+          <h2>Each Team Member</h2>
+          <ul>
+            <li>Inside the file write one sentence
+            <li>Describing the state of the character
+          </ul>
+        </section>
+
+        <section>
+          <h2>Each Team Member</h2>
+          <ul>
+            <li>Git add the file
+            <li>Git commit
+            <li>Git push upstream
+          </ul>
+        </section>
+
+       <section>
+          <h3>Your push may fail... </h3>
+          <h4>with a message like this</h4>
+          <pre><code data-trim contenteditable>
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:ossp/Git-Branchy-Story-Exercise-01.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and merge the remote changes
+hint: (e.g. 'git pull') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>This just means</h3>
+          <h3>than someone else</h3>
+          <h3>pushed before you</h3>
+        </section>
+
+        <section>
+          <h3>so now</h3>
+          <h3>you have to update</h3>
+          <h3>your local repository</h3>
+        </section>
+
+        <section>
+          <h4>Update With the Command</h4>
+          <pre><code data-trim contenteditable>
+git pull origin master
+          </code></pre>
+          <h4>and then try again the Command</h4>
+          <pre><code data-trim contenteditable>
+git push origin master
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>You may have</h3>
+          <h3>to do it</h3>
+          <h3>multiple times</h3>
+        </section>
+
+        <section>
+          <h2>Each Team Member</h2>
+          <ul>
+            <li>Edit the file of her/his character
+            <li>Change the state of the character
+          </ul>
+        </section>
+
+        <section>
+          <h2>Each Team Member</h2>
+          <ul>
+            <li>Git create branch
+            <li>Git select branch
+            <li>Git add
+            <li>Git commit into branch
+          </ul>
+        </section>
+
+        <section>
+          <h4>Use the Commands</h4>
+          <pre><code data-trim contenteditable>
+git branch MyNewBranch
+git checkout MyNewBranch
+vim myCharacter.md
+git add myCharacter.md
+git commit
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>The commit message must</h3>
+          <h4>Explain "how" and "why"</h4>
+          <h4>the character changed state</h4>
+        </section>
+
+        <section>
+          <h2>Each Team Member</h2>
+          <ul>
+            <li>Git move to master branch
+            <li>Git update master from upstream
+            <li>Git merge branch into master
+            <li>Git push master upstream
+          </ul>
+        </section>
+
+        <section>
+          <h4>Use the Commands</h4>
+          <pre><code data-trim contenteditable>
+git checkout master
+git pull origin master
+git merge --no-ff MyNewBranch
+git push origin master
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Reading the Story</h2>
+          <h4>as the story grows</h4>
+          <h4>you can read it</h4>
+          <h4>by using the command:</h4>
+          <pre><code data-trim contenteditable>
+git  log  --no-merges   .
+          </code></pre>
+        </section>
+
+        <section>
+          <h4>This will show you</h4>
+          <h4>what happened</h4>
+          <h4>to all the characters</h4>
+          <h4>in that directory</h4>
+        </section>
+
+        <section>
+          <h3>To read the Story</h3>
+          <h4>of a single character</h4>
+          <h4>use the command:</h4>
+          <pre><code data-trim contenteditable>
+git  log  --no-merges   myCharacter.md
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>To read the summary</h3>
+          <h4>of the story</h4>
+          <h4>use the command:</h4>
+          <pre><code data-trim contenteditable>
+git  log  --no-merges   myCharacter.md --oneline
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>You can see the Graph</h3>
+          <h3>with the command</h3>
+          <pre><code data-trim contenteditable>
+git log  --graph
+          </code></pre>
+          <a href="#" class="image">
+            <img src="images/GitIntroductionPartII-008.png" alt="Add remote">
+          </a>
+        </section>
+
+        <section>
+          <h3>You can see the Graph</h3>
+          <h3>with the tool gitk</h3>
+          <pre><code data-trim contenteditable>
+gitk
+          </code></pre>
+          <a href="#" class="image">
+            <img src="images/GitIntroductionPartII-009.png" alt="Add remote">
+          </a>
+        </section>
+
+
+        <section>
+          <h1>Your Turn !</h1>
+        </section>
+
+        <section>
+          <h2>Unleash your imagination!</h2>
+        </section>
+
+        <section>
+          <h3>Coordinate</h3>
+          <h3>with your team mates</h3>
+          <ul>
+            <li>Interactions between your characters
+            <li>Apply the state changes to your files
+            <li>Git commit, add, merge, every time
+            <li>Read the story as it progresses
+          </ul>
+        </section>
+
+        <section>
+          <h2>Complete Five</h2>
+          <h2>Five Actions</h2>
+          <h2>per character</h2>
+        </section>
+
+        <section>
+          <h1>Breath!</h1>
+          <h1>Smile!</h1>
+        </section>
 
         <section>
           <h1>THE END</h1>
