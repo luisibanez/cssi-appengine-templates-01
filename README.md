@@ -1,4 +1,6 @@
-Git-Introduction-Part-II
-========================
+Encounter Template
+==================
 
-Introduction to Git remote repositories and collaboration
+Basic template to create learning encounters with Reveal.js.
+
+
