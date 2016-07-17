@@ -1,7 +1,7 @@
-Encounter Template
-==================
+AppEngine Templates
+===================
 
-Basic template to create learning encounters with Reveal.js.
+Introduction to the use of templates in AppEngine applications.
 
 
 The content of this repository is copyrighted by contributors and it is distributed under the following licenses.
@@ -15,22 +15,6 @@ All Works of Art are licensed under the Creative Commons by Attribution 4.0 Lice
 Current Author
 ==============
 
-INSERT AUTHOR NAME HERE
+Luis Ibanez
 
 
-Abstract
-========
-
-Insert your abstract here
-
-
-Keywords
-========
-
-Insert keywords here, to make easier to search for content
-
-
-Credits
-=======
-
-Insert contributors here and credits
