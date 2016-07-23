@@ -135,6 +135,179 @@ app = webapp2.WSGIApplication([
             </div>
         </section>
 
+        <section>
+            <h3>Closer Look at MainHandler</h3>
+            <div class="fragment">
+            <p>The content of "self.response.write"</p>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write('Hello World!')
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>Is really HTML</p>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write('<h1>Hello World!</h1>')
+           </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Not</h2>
+            <h2>a good way</h2>
+        </section>
+
+        <section>
+            <h2>to write</h2>
+            <h2>a full HTML page</h2>
+        </section>
+
+        <section>
+            <h1>Templates</h1>
+        </section>
+
+        <section>
+            <h3>Use Templates Instead</h3>
+            <div class="fragment">
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write('Hello World!')
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>With a template becomes</p>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(template.render())
+           </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Using Templates</h3>
+            <div class="fragment">
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(template.render())
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>Where the template comes from</p>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render())
+           </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Using Templates</h3>
+            <div class="fragment">
+            <pre><code class="language-python">
+        template = jinja_environment.get_template('templates/main.html')
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>Where the jinja_environment comes from</p>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+jinja_environment = jinja2.Environment(loader=
+    jinja2.FileSystemLoader(os.path.dirname(__file__)))
+           </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>All Together</h3>
+            <div class="fragment">
+            <pre><code class="language-python">
+import jinja2
+import os
+import webapp2
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+jinja_environment = jinja2.Environment(loader=
+    jinja2.FileSystemLoader(os.path.dirname(__file__)))
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render())
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+app = webapp2.WSGIApplication([
+    ('/', MainHandler)
+], debug=True)
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Using Templates YAML</h3>
+            <div class="fragment">
+            <pre><code class="language-yaml">
+libraries:
+- name: webapp2
+  version: "2.5.2"
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>With templates becomes</p>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-yaml">
+libraries:
+- name: jinja2
+  version: latest
+- name: webapp2
+  version: "2.5.2"
+           </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>HTML Template</h3>
+            <div class="fragment">
+            <pre><code class="language-html">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <h1>AppEngine</h1>
+    <img src="https://cloud.google.com/images/products/logos/appengine-symbol.png" alt="AppEngine Logo">
+  </body>
+</html>
+            </code></pre>
+            </div>
+        </section>
+
 
 
       </div>
