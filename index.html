@@ -508,6 +508,30 @@ grading_method = Audit
             </div>
         </section>
 
+        <section>
+            <h3>Query String</h3>
+            <div class="fragment">
+            <h4>The values</h4>
+            <pre><code class="language-python">
+https://api.umd.io/v0/courses ?
+dept_id = CMS
+semester = 201501
+credits = 3
+department = Computer%20Science
+grading_method = Audit
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <h4>can be read in python as</h4>
+            <pre><code class="language-python">
+value1 = self.request.get('dept_id')
+value2 = self.request.get('semester')
+value3 = self.request.get('credits')
+value4 = self.request.get('department')
+value5 = self.request.get('grading_method')
+            </code></pre>
+            </div>
+        </section>
 
         <section>
             <h1>END</h1>
