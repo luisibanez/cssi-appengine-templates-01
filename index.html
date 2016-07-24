@@ -534,6 +534,37 @@ value5 = self.request.get('grading_method')
         </section>
 
         <section>
+            <h3>Data Flow</h3>
+            <div class="fragment">
+            <p>From Query String<p>
+            <pre><code class="language-html">
+https://localhost:8080/?name=Luis&food=Tacos&music=Salsa
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>Extract in Python<p>
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template_vars = {}
+        template_vars["name"] = self.request.get('name')
+        template_vars["food"] = self.request.get('food')
+        template_vars["music"] = self.request.get('music')
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render(template_vars))
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>Down to HTML:<p>
+            <pre><code class="language-html">
+<h1>Hello {{ name }} !</h1>
+<h1>Let's eat {{ food }} !</h1>
+<h1>and listen to {{ music }} !</h1>
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
             <h1>END</h1>
         </section>
 
