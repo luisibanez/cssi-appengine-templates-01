@@ -629,9 +629,64 @@ class MainHandler(webapp2.RequestHandler):
         </section>
 
         <section>
-            <h1>Exercise!</h1>
+            <h2>Python in</h2>
+            <h2>Templates</h2>
         </section>
 
+        <section>
+            <h2>Python logic</h2>
+            <div class="fragment">
+            <p>Manage default for <p>
+            <pre><code class="language-html">
+<h1>Hello {{ name }} !</h1>
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>with something like<p>
+            <pre><code class="language-html">
+<h1>Hello
+  if name
+     {{ name }} !
+  else
+     Dracula !
+  endif
+</h1>
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Embedded Python Syntax</h2>
+            <div class="fragment">
+            <p>looks like<p>
+            <pre><code class="language-html">
+<h1>Hello
+  {% if name %}
+     {{ name }} !
+  {% else %}
+     Dracula !
+  {% endif %}
+</h1>
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>"Mustaches"</h2>
+            <div class="fragment">
+            <h4>Variables</h4>
+            <br>
+            <h2>{{    }}</h2>
+            <br>
+            </div>
+            <div class="fragment">
+            <h4>Statements</h4>
+            <br>
+            <h2>{%    %}</h2>
+            <br>
+            </div>
+        </section>
+        </section>
 
         <section>
             <h2>Getting</h2>
