@@ -592,6 +592,64 @@ class MainHandler(webapp2.RequestHandler):
         </section>
 
         <section>
+            <h2>Logic in</h2>
+            <h2>Templates</h2>
+        </section>
+
+        <section>
+            <h3>Missing Parameters?</h3>
+            <div class="fragment">
+            <p>From Query String<p>
+            <pre><code class="language-html">
+https://localhost:8080/?name=Luis&food=Tacos&music=Salsa
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>What to do with only<p>
+            <pre><code class="language-html">
+https://localhost:8080/?music=Salsa
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Default Values</h3>
+            <div class="fragment">
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template_vars = {
+            "name": self.request.get('name', default_value='Dracula'),
+            "food": self.request.get('food', default_value='Brocoli'),
+            "music": self.request.get('music', default_value='Techno')}
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render(template_vars))
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h1>Exercise!</h1>
+        </section>
+
+
+        <section>
+            <h2>Getting</h2>
+            <h2>information</h2>
+            <h2>from</h2>
+            <h2>the request</h2>
+        </section>
+
+        <section>
+            <h2>Method 2</h2>
+        </section>
+
+        <section>
+            <h2>Forms</h2>
+        </section>
+
+
+        <section>
             <h1>END</h1>
         </section>
 
