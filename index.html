@@ -440,6 +440,76 @@ class MainHandler(webapp2.RequestHandler):
         </section>
 
         <section>
+            <h2>Getting</h2>
+            <h2>information</h2>
+            <h2>from</h2>
+            <h2>the request</h2>
+        </section>
+
+        <section>
+            <h2>Method 1</h2>
+        </section>
+
+        <section>
+            <h2>The</h2>
+            <h2>Query</h2>
+            <h2>String</h2>
+        </section>
+
+        <section>
+            <h3>Query String</h3>
+            <div class="fragment">
+            <pre><code class="language-html">
+    https://www.facebook.com/login.php?login_attempt=1
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <br>
+            <h4>?login_attempt=1</h4>
+            </div>
+        </section>
+
+        <section>
+            <h3>Query String</h3>
+            <div class="fragment">
+            <pre><code class="language-html">
+    url?key1=value1
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-html">
+    url?key1=value1&key2=value2
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-html">
+    url?key1=value1&key2=value2&key3=value3
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Query String</h3>
+            <div class="fragment">
+            <pre><code class="language-html">
+    https://api.umd.io/v0/courses?dept_id=CMS&semester=201501&credits=3&department=Computer%20Science&grading_method=Audit
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+https://api.umd.io/v0/courses
+?
+dept_id = CMS
+semester = 201501
+credits = 3
+department = Computer%20Science
+grading_method = Audit
+            </code></pre>
+            </div>
+        </section>
+
+
+        <section>
             <h1>END</h1>
         </section>
 
