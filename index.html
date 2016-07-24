@@ -317,6 +317,132 @@ libraries:
             <h1>Web</h1>
         </section>
 
+        <section>
+            <h2>Introducing</h2>
+            <h2>Variables</h2>
+        </section>
+
+        <section>
+            <h3>Introducing Variables</h3>
+            <div class="fragment">
+            <p>Replace<p>
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render())
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>With<p>
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template_vars = {"name": "CSSI NYC"}
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render(template_vars))
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Introducing Variables</h3>
+            <div class="fragment">
+            <h4>Replace</h4>
+            <pre><code class="language-html">
+    <h1>Hello World!</h1>
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <h4>With</h4>
+            <pre><code class="language-html">
+    <h1>Hello {{ name }} !</h1>
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Let's Call</h2>
+            <div class="fragment">
+            <br>
+            <h2>{{    }}</h2>
+            <br>
+            </div>
+            <div class="fragment">
+            <h2>"Mustaches"</h2>
+            </div>
+        </section>
+
+        <section>
+            <h3>Data Flow</h3>
+            <div class="fragment">
+            <p>The variable called: "name"<p>
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template_vars = {"name": "CSSI NYC"}
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render(template_vars))
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>Flows to:<p>
+            <pre><code class="language-html">
+<h1>Hello {{ name }} !</h1>
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Data Flow</h3>
+            <div class="fragment">
+            <p>More Variables<p>
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template_vars = {
+            "name": "CSSI NYC",
+            "food": "Pizza",
+            "music": "Jazz"}
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render(template_vars))
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>Flows to:<p>
+            <pre><code class="language-html">
+<h1>Hello {{ name }} !</h1>
+<h1>Let's eat {{ food }} !</h1>
+<h1>and listen to {{ music }} !</h1>
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h1>Exercise!</h1>
+        </section>
+
+        <section>
+            <h2>Introduce</h2>
+            <h2>Logic</h2>
+            <h2>in Handler</h2>
+        </section>
+
+        <section>
+            <h2>Choose</h2>
+            <h2>Food and music</h2>
+        </section>
+
+        <section>
+            <h2>According to</h2>
+            <h2>time</h2>
+            <h2>of the day</h2>
+        </section>
+
+        <section>
+            <h1>END</h1>
+        </section>
+
       </div>
 
     </div>
