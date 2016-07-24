@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1>Hello
+    {% if name.lower() == 'dracula' %}
+          Count Dracula! I was not expecting you.
+    {% else %}
+          {{ name }}!
+    {% endif %}
+    </h1>
+    <h1>Let's eat {{ food }}!</h1>
+    <h1>and listen to {{ music }}!</h1>
+    <img src="https://cloud.google.com/images/products/logos/appengine-symbol.png" alt="AppEngine Logo">
+  </body>
+</html>
