@@ -861,7 +861,7 @@ https://localhost:8080/?showimg=no
         <section>
             <h3>Dictionaries</h3>
             <div class="fragment">
-            <p>Pass a dictionarie<p>
+            <p>Pass a dictionary<p>
             <pre><code class="language-python">
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -932,6 +932,100 @@ class MainHandler(webapp2.RequestHandler):
             <h2>Forms</h2>
         </section>
 
+        <section>
+            <h3>Form</h3>
+            <div class="fragment">
+            <p>In HTML template<p>
+            <pre><code class="language-html">
+<h1>Pizza NYC</h1>
+<h2>Best Pizza you will ever code</h2>
+
+<form method=post>
+    <p>Crust: <input type="text" name="crust"/></p>
+    <p>Size: <input type="text" name="size"/></p>
+    <p>Sauce: <input type="text" name="sauce"/></p>
+    <p>Cheese: <input type="text" name="cheese"/></p>
+    <p>Topings: <input type="text" name="topings"/></p>
+    <button type="submit">Place Order</button>
+</form>
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Data Transfer</h3>
+            <div class="fragment">
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+    def get(self):
+        template = jinja_environment.get_template('templates/input_order.html')
+        self.response.write(template.render())
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-python">
+    def post(self):
+        template = jinja_environment.get_template('templates/output_order.html')
+        pizza_order = {
+          'crust_answer': self.request.get('crust'),
+          'size_answer': self.request.get('size'),
+          'sauce_answer': self.request.get('sauce'),
+          'cheese_answer': self.request.get('cheese'),
+          'topings_answer': self.request.get('topings')}
+        self.response.write(template.render(pizza_order))
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Response Template</h3>
+            <div class="fragment">
+            <p>In HTML<p>
+            <pre><code class="language-html">
+<h1>Pizza NYC</h1>
+<h2>Best Pizza you will ever code</h2>
+
+<h2>We got your order!</h2>
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-html">
+<p>Crust: {{ crust_answer }} </p>
+<p>Size: {{ size_answer }} </p>
+<p>Sauce: {{ sauce_answer }} </p>
+<p>Cheese: {{ cheese_answer }} </p>
+<p>Topings: {{ topings_answer }} </p>
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <pre><code class="language-html">
+<h2>Our minions are starting to work on it.</h2>
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h1>Exercise!</h1>
+        </section>
+
+        <section>
+            <h2>Use</h2>
+            <h2>Forms</h2>
+        </section>
+
+        <section>
+            <h2>to build</h2>
+            <h2>a class</h2>
+            <h2>registration system</h2>
+        </section>
+
+        <section>
+            <h2>End of Exercise</h2>
+        </section>
 
         <section>
             <h1>END</h1>
