@@ -696,6 +696,24 @@ class MainHandler(webapp2.RequestHandler):
         </section>
 
         <section>
+            <h2>No need for ":"</h2>
+            <div class="fragment">
+            <pre><code class="language-html">
+<h1>Hello
+  {% if name %}
+     {{ name }} !
+  {% else %}
+     Dracula !
+  {% endif %}
+</h1>
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <h3>To begin blocks</h3>
+            </div>
+        </section>
+
+        <section>
             <h1>Exercise!</h1>
         </section>
 
@@ -714,6 +732,57 @@ class MainHandler(webapp2.RequestHandler):
         <section>
             <h2>End of Exercise</h2>
         </section>
+
+        <section>
+            <h2>Loops</h2>
+            <h2>in</h2>
+            <h2>Templates</h2>
+        </section>
+
+        <section>
+            <h3>Loops and lists</h3>
+            <div class="fragment">
+            <p>Pass a list in Python<p>
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template_vars = {
+            'names': ['John', 'Paul', 'George', 'Ringo']}
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render(template_vars))
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>Down to HTML<p>
+            <pre><code class="language-html">
+<h1>The Beatles</h1>
+<ul>
+{% for name in names %}
+    <li> {{name}} </li>
+{% endfor %}
+</ul>
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h1>Exercise!</h1>
+        </section>
+
+        <section>
+            <h2>Show</h2>
+            <h2>Your Favorite</h2>
+            <h2>Movies</h2>
+        </section>
+
+        <section>
+            <h2>As a list</h2>
+        </section>
+
+        <section>
+            <h2>End of Exercise</h2>
+        </section>
+
 
         <section>
             <h2>Getting</h2>
