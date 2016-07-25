@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Beatles</title>
+  </head>
+  <body>
+    <h1>The Beatles</h1>
+    <ul>
+    {% for name in names %}
+        <li> {{name}} </li>
+    {% endfor %}
+    </ul>
+    {% if showimg!='no' %}
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/The_Fabs.JPG/480px-The_Fabs.JPG" alt="Beatles Picture">
+    {% endif %}
+  </body>
+</html>
