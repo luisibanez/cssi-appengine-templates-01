@@ -5,10 +5,10 @@
   </head>
   <body>
     <h1>The Beatles</h1>
-    {% for beatle in beatles %}
-        <h2> {{ beatles[beatle]['name'] }} </h2>
-        <h3> Date of birth: {{ beatles[beatle]['dob'] }} </h3>
-        <h3> Place of birth: {{ beatles[beatle]['pob'] }} </h3>
+    {% for i in beatles %}
+        <h2> {{ beatles[i]['name'] }} </h2>
+        <h3> Date of birth: {{ beatles[i]['dob'] }} </h3>
+        <h3> Place of birth: {{ beatles[i]['pob'] }} </h3>
     {% endfor %}
     {% if showimg!='no' %}
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/The_Fabs.JPG/480px-The_Fabs.JPG" alt="Beatles Picture">
