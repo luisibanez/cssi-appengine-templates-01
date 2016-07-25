@@ -854,6 +854,70 @@ https://localhost:8080/?showimg=no
         </section>
 
         <section>
+            <h2>Passing</h2>
+            <h2>Dictionaries</h2>
+        </section>
+
+        <section>
+            <h3>Dictionaries</h3>
+            <div class="fragment">
+            <p>Pass a dictionarie<p>
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        beatles_dict = {
+            'John': { 'name': 'John Lennon', 'dob': '10/09/40', 'pob': 'Liverpool'},
+            'Paul': { 'name': 'Paul McCartney', 'dob': '06/18/42', 'pob': 'Liverpool'},
+            'George': { 'name': 'George Harrison', 'dob': '02/25/43', 'pob': 'Liverpool'},
+            'Ringo': { 'name': 'Ringo Starr', 'dob': '07/07/40', 'pob': 'Dingle'}}
+        template_vars = {
+            'beatles': beatles_dict,
+            'showimg': self.request.get('showimg')}
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render(template_vars))
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Dictionaries</h3>
+            <div class="fragment">
+            <p>Down to HTML<p>
+            <pre><code class="language-html">
+<h1>The Beatles</h1>
+{% for i in beatles %}
+    <h2> {{ beatles[i]['name'] }} </h2>
+    <h3> Date of birth: {{ beatles[i]['dob'] }} </h3>
+    <h3> Place of birth: {{ beatles[i]['pob'] }} </h3>
+{% endfor %}
+{% if showimg!='no' %}
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/The_Fabs.JPG/480px-The_Fabs.JPG" alt="Beatles Picture">
+{% endif %}
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h1>Exercise!</h1>
+        </section>
+
+        <section>
+            <h2>Use</h2>
+            <h2>Dictionaries</h2>
+        </section>
+
+        <section>
+            <h2>to show data</h2>
+            <h2>of your</h2>
+            <h2>favorite movies</h2>
+        </section>
+
+        <section>
+            <h2>End of Exercise</h2>
+        </section>
+
+
+        <section>
             <h2>Getting</h2>
             <h2>information</h2>
             <h2>from</h2>
