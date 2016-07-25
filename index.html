@@ -783,6 +783,75 @@ class MainHandler(webapp2.RequestHandler):
             <h2>End of Exercise</h2>
         </section>
 
+        <section>
+            <h2>Combining</h2>
+            <h2>with</h2>
+            <h2>Get Method</h2>
+        </section>
+
+        <section>
+            <h3>Loops, lists and get</h3>
+            <div class="fragment">
+            <p>Pass a list and get a value from the query string<p>
+            <pre><code class="language-python">
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template_vars = {
+            'names': ['John', 'Paul', 'George', 'Ringo'],
+            'showimg': self.request.get('showimg')}
+        template = jinja_environment.get_template('templates/main.html')
+        self.response.write(template.render(template_vars))
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>Down to HTML<p>
+            <pre><code class="language-html">
+<h1>The Beatles</h1>
+<ul>
+{% for name in names %}
+    <li> {{name}} </li>
+{% endfor %}
+</ul>
+{% if showimg!='no' %}
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/The_Fabs.JPG/480px-The_Fabs.JPG" alt="Beatles Picture">
+{% endif %}
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Try it with</h3>
+            <div class="fragment">
+            <p>Showing image<p>
+            <pre><code class="language-html">
+https://localhost:8080/?showimg=yes
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <p>Not showing image<p>
+            <pre><code class="language-html">
+https://localhost:8080/?showimg=no
+            </code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h1>Exercise!</h1>
+        </section>
+
+        <section>
+            <h2>Enable / Disable</h2>
+            <h2>Showing an image</h2>
+        </section>
+
+        <section>
+            <h2>Of your</h2>
+            <h2>favorite movie</h2>
+        </section>
+
+        <section>
+            <h2>End of Exercise</h2>
+        </section>
 
         <section>
             <h2>Getting</h2>
